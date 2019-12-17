@@ -1,0 +1,11 @@
+.wrap {
+    width: 750rpx;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+
+    view {
+        height: 108rpx;
+        line-height: 108rpx;
+        border-bottom: 1rpx solid #ddd;
+    }
+}

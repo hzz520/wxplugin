@@ -1,0 +1,40 @@
+{
+    "extends": "standard",
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "rules": {
+      "indent": [
+        "error",
+        4,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "no-array-constructor": 0,
+      "no-trailing-spaces": 0,
+      "no-unused-vars": 1,
+      "eqeqeq": 0,
+      "no-proto": 0,
+      "camelcase": 0,
+      "prefer-promise-reject-errors": 0,
+      "no-useless-escape": 0
+    },
+    "globals": {
+      "App": true,
+      "$": true,
+      "wx": true,
+      "Page": true,
+      "Component": true,
+      "getCurrentPages": true,
+      "requirePlugin": true
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "worker": true,
+      "mocha": true,
+      "phantomjs": true,
+      "serviceworker": true
+    }
+}
