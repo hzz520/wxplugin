@@ -22,7 +22,7 @@
     },
     "globals": {
       "App": true,
-      "$": true,
+      "Behavior": true,
       "wx": true,
       "Page": true,
       "Component": true,

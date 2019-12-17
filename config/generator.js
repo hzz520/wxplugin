@@ -2,7 +2,7 @@
  * @Author: huangzz 
  * @Date: 2019-07-31 19:44:51 
  * @Last Modified by: huangzz
- * @Last Modified time: 2019-12-17 14:18:18
+ * @Last Modified time: 2019-12-17 15:45:59
  */
 const path = require('path')
 const getEntry = require('./entry')
@@ -78,9 +78,6 @@ module.exports = (name) => {
                         {
                             // 添加scss模块
                             loader: 'add-module-loader'
-                        },
-                        {
-                            loader: 'ts-loader'
                         },
                         {
                             loader: 'eslint-loader'

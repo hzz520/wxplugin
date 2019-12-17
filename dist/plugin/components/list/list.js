@@ -1,1 +1,1 @@
-require('../../js/manifest.js');module.exports = require('../../js/components/list/list.js');
+require('../../js/manifest.js');require('../../js/vendor.js');module.exports = require('../../js/components/list/list.js');

@@ -1,60 +1,5 @@
-(function(e, a) { for(var i in a) e[i] = a[i]; }(exports, (global["webpackJsonp"] = global["webpackJsonp"] || []).push([[2],[
-/* 0 */,
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(2);
-
-var _regenerator = _interopRequireDefault(__webpack_require__(3));
-
-var _requirePlugin = requirePlugin('myPlugin'),
-    request = _requirePlugin.request; // plugin = plugin.default || plugin
-
-
-Page({
-  data: {
-    list: [{
-      name: '电视',
-      price: 1000
-    }, {
-      name: '电脑',
-      price: 4000
-    }, {
-      name: '手机',
-      price: 3000
-    }]
-  },
-  onLoad: function onLoad() {
-    return _regenerator.default.async(function onLoad$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-          case "end":
-            return _context.stop();
-        }
-      }
-    });
-  },
-  changelist: function changelist(e) {
-    var index = e;
-
-    if (e.type) {
-      index = e.detail.index;
-    }
-
-    var list = this.data.list;
-    list[index].price = Math.floor(Math.random() * 1000);
-    this.setData({
-      list: list
-    });
-  }
-});
-
-/***/ }),
-/* 2 */
+(global["webpackJsonp"] = global["webpackJsonp"] || []).push([[1],[
+/* 0 */
 /***/ (function(module, exports) {
 
 function _interopRequireDefault(obj) {
@@ -66,14 +11,14 @@ function _interopRequireDefault(obj) {
 module.exports = _interopRequireDefault;
 
 /***/ }),
-/* 3 */
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(4);
+module.exports = __webpack_require__(2);
 
 
 /***/ }),
-/* 4 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -804,5 +749,232 @@ try {
 }
 
 
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+module.exports = _classCallCheck;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
+module.exports = _createClass;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(0);
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _regenerator = _interopRequireDefault(__webpack_require__(1));
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(6));
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+var _callee = function _callee(options) {
+  var defaultOptions, res;
+  return _regenerator.default.async(function _callee$(_context) {
+    while (1) {
+      switch (_context.prev = _context.next) {
+        case 0:
+          // eslint-disable-next-line no-new
+          defaultOptions = {
+            url: '',
+            method: 'get',
+            data: {},
+            header: {
+              contentType: 'application/x-www-form-urlencoded'
+            }
+          };
+          _context.next = 3;
+          return _regenerator.default.awrap(new Promise(function (resolve, reject) {
+            wx.request(_objectSpread({}, defaultOptions, {}, options, {
+              success: function success(res) {
+                if (res.statusCode === 0) {
+                  resolve(res.data);
+                  return false;
+                } // todo 异常处理弹窗
+
+
+                reject('error');
+              },
+              fail: function fail(err) {
+                // todo 异常处理弹窗
+                reject(err);
+              }
+            }));
+          }));
+
+        case 3:
+          res = _context.sent;
+          return _context.abrupt("return", res);
+
+        case 5:
+        case "end":
+          return _context.stop();
+      }
+    }
+  });
+};
+
+exports.default = _callee;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+module.exports = _defineProperty;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(0);
+
+var _regenerator = _interopRequireDefault(__webpack_require__(1));
+
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(3));
+
+var _createClass2 = _interopRequireDefault(__webpack_require__(4));
+
+Component({
+  data: {// list: []
+  },
+  properties: {
+    list: {
+      type: [{
+        name: String,
+        price: String | Number
+      }]
+    },
+    changelist: {
+      type: Function
+    }
+  },
+  attached: function attached() {
+    var a = new About();
+    a.render(); // 可以在这里发起网络请求获取插件的数据
+    // this.setData({
+    //     list: [{
+    //         name: '电视',
+    //         price: 1000
+    //     }, {
+    //         name: '电脑',
+    //         price: 4000
+    //     }, {
+    //         name: '手机',
+    //         price: 3000
+    //     }]
+    // })
+  },
+  methods: {
+    handleClick: function handleClick(e) {
+      var index = e.target.dataset.index;
+      this.triggerEvent('changelist', {
+        index: index
+      });
+    }
+  }
+});
+
+var About =
+/*#__PURE__*/
+function () {
+  function About() {
+    (0, _classCallCheck2.default)(this, About);
+    this.a = 'a';
+  }
+
+  (0, _createClass2.default)(About, [{
+    key: "render",
+    value: function render() {
+      return _regenerator.default.async(function render$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              console.log(777);
+
+            case 1:
+            case "end":
+              return _context.stop();
+          }
+        }
+      });
+    }
+  }]);
+  return About;
+}();
+
+/***/ }),
+/* 8 */,
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(0);
+
+var _http = _interopRequireDefault(__webpack_require__(5));
+
+/**
+ * @param 使用module.exports 保证宿主小程序能直接requireplugin
+ */
+module.exports = {
+  request: _http.default
+};
+
 /***/ })
-],[[1,0]]])));
+]]);

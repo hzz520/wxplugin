@@ -1,1 +1,1 @@
-require('../js/manifest.js');module.exports = require('../js/utils/http.js');
+require('../js/manifest.js');require('../js/vendor.js');module.exports = require('../js/utils/http.js');

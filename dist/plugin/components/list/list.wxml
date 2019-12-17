@@ -1,1 +1,1 @@
-<view class="wrap" wx:for="{{list}}" wx:key="name"><view>{{item.name}}:{{item.price}}</view></view>
+<view class="wrap" wx:for="{{list}}" wx:key="name" wx:for-index="i"><view bind:tap="handleClick" data-item="{{item}}" data-index="{{i}}">{{item.name}}:{{item.price}}</view></view>

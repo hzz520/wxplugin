@@ -1,1 +1,1 @@
-<list />
+<list list="{{list}}" bind:changelist="changelist"/>
